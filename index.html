@@ -7,35 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <div ng-controller="myCtr">
-
-            <form ng-submit="addPlayers()">
-                    <input type="text" ng-model="newName"  />
-                    <input type="text" ng-model="newId"  />
-                    <input type="text" ng-model="newRuns" />
-                    <input type="submit" value="addPlayers" >
-            </form>
-
-    <table border="1">
-        <tr>
-            <th>name</th>
-            <th>id</th>
-            <th>Photo</th>
-            <th>runs</th>
-            <th>delete</th>
-        </tr>
-        <tr ng-repeat="player in players">
-            <td>{{player.name}}</td>
-            <td>{{player.id}}</td>
-            <td><img ng-src="{{player.photo}}" height="100" width="100" /></td>
-            <td>{{player.runs}}</td>
-            <td ng-click="deletePlayer(player)">X</td>
-        </tr>
-    </table>
-
-  
-</div>
+ <div ng-include="'views/header.html'"></div>
+   
+<ng-view></ng-view>
     <script src="angular.min.js"></script>
+    <script src="angular-route.min.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
