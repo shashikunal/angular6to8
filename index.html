@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
  <div ng-include="'views/header.html'"></div>
-   
-<ng-view></ng-view>
+ <div class="container">
+    <ng-view></ng-view>
+ </div>  
+
     <script src="angular.min.js"></script>
     <script src="angular-route.min.js"></script>
     <script src="app.js"></script>
