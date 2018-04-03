@@ -1,1 +1,26 @@
 <h1>home page</h1>
+
+
+<input type="text" ng-model="limit" class="form-control" />
+
+<div ng-controller="myCtr">
+    <table class="table table-bordered">
+        <tr>
+            <th><a href="#" ng-click="order='name';reverse=!reverse">name</a></th>
+            <th>age</th>
+            <th>company</th>
+            <th>doj</th>
+            <th>salary</th>
+        </tr>
+        <tr ng-repeat="user in userdata| filter:search:true | orderBy:'name'">
+            <td>{{user.name | myFilter:limit }}</td>
+            <td>{{user.age}}</td>
+            <td>{{user.company}}</td>
+            <td>{{user.doj|date:'MM/dd/yyyy'}}</td>
+            <td>{{user.salary | currency:"&#8377"}}</td>
+        </tr>
+    </table>
+
+</div>
+
+
